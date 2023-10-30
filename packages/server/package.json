@@ -1,0 +1,26 @@
+{
+	"name": "server",
+	"module": "src/index.ts",
+	"type": "module",
+	"devDependencies": {
+		"@libsql/client": "^0.3.6",
+		"@t3-oss/env-core": "^0.7.1",
+		"better-sqlite3": "^9.0.0",
+		"bun-types": "^1.0.7",
+		"drizzle-kit": "^0.19.13",
+		"drizzle-orm": "^0.28.6",
+		"typescript": "^5.2.2",
+		"zod": "^3.22.4",
+		"@openpgp/web-stream-tools": "0.0.11-patch-0"
+	},
+	"scripts": {
+		"db:push": "bunx drizzle-kit push:sqlite",
+		"db:studio": "bunx drizzle-kit studio",
+		"start": "bun run ./src/index.ts",
+		"dev": "bun --hot run ./src/index.ts"
+	},
+	"dependencies": {
+		"elysia": "^0.7.21",
+		"openpgp": "^5.11.0"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "client",
+	"module": "src/index.ts",
+	"type": "module",
+	"devDependencies": {
+		"server": "workspace:*"
+	},
+	"scripts": {
+		"db:push": "drizzle-kit push:sqlite",
+		"db:studio": "drizzle-kit studio",
+		"build": "rm -rf dist && tsc"
+	},
+	"dependencies": {
+		"@elysiajs/eden": "^0.7.4"
+	}
+}
